@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Maker - T A T S U K I</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Creepster&family=Orbitron:wght@400..900&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">T A T S U K I</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mememaker.html">Meme Maker</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="meme-maker-container">
+            <div class="meme-controls">
+                <h2>Create Your Meme</h2>
+
+                <div class="control-group">
+                    <label>Choose a Base Image:</label>
+                    <div class="preset-images">
+                        <!-- Preset images will be populated by JS -->
+                    </div>
+                    <label for="image-upload">Or Upload Your Own:</label>
+                    <input type="file" id="image-upload" accept="image/*">
+                </div>
+
+                <div class="control-group">
+                    <label for="text-input">Text:</label>
+                    <input type="text" id="text-input" placeholder="Enter your text...">
+                    <button id="add-text-btn">Add Text</button>
+                </div>
+
+                <div class="control-group">
+                    <label for="font-select">Font:</label>
+                    <select id="font-select">
+                        <option value="Impact">Impact</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Bangers">Bangers</option>
+                        <option value="Creepster">Creepster</option>
+                        <option value="Orbitron">Orbitron</option>
+                        <option value="Poppins">Poppins</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="color-picker">Color:</label>
+                    <input type="color" id="color-picker" value="#FFFFFF">
+                </div>
+
+                <button id="download-btn">Download Meme</button>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="meme-canvas"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 T A T S U K I. All rights reserved.</p>
+    </footer>
+
+    <div id="music-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/meme-maker.js"></script>
+</body>
+</html>

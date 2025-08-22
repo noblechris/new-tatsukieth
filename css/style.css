@@ -1,0 +1,334 @@
+/* --- General Setup & Variables --- */
+:root {
+    --deep-purple: #2D1B4E;
+    --neon-yellow: #FFFF00;
+    --neon-green: #39FF14;
+    --light-text: #F5F5F5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--deep-purple);
+    color: var(--light-text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--neon-green);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-yellow);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* --- Header & Navigation --- */
+header {
+    padding: 1rem 5%;
+    border-bottom: 1px solid var(--neon-green);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--neon-yellow);
+    letter-spacing: 0.3em;
+    text-shadow: 0 0 5px var(--neon-yellow);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    font-weight: 700;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--neon-yellow);
+    text-shadow: 0 0 5px var(--neon-yellow);
+}
+
+/* --- Main Content & Footer --- */
+main {
+    padding: 2rem 5%;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 5%;
+    margin-top: 2rem;
+    border-top: 1px solid var(--neon-green);
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* --- Home Page: Hero Section --- */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* --- Home Page: NFT Gallery --- */
+.nft-gallery h2, .roadmap h2, .cta h2 {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-grid img {
+    border: 3px solid var(--neon-green);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* --- Home Page: Roadmap --- */
+.roadmap {
+    max-width: 800px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+/* --- Home Page: CTA / Social Links --- */
+.cta {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--neon-yellow);
+    color: var(--neon-yellow);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-link:hover {
+    background-color: var(--neon-yellow);
+    color: var(--deep-purple);
+}
+
+/* --- About Page --- */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* --- Meme Maker Page --- */
+.meme-maker-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.meme-controls {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--neon-green);
+}
+
+.canvas-container {
+    flex: 2;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#meme-canvas {
+    border: 2px dashed var(--neon-yellow);
+    max-width: 100%;
+}
+
+.control-group {
+    margin-bottom: 1.5rem;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-yellow);
+}
+
+.meme-controls input[type="text"],
+.meme-controls input[type="file"],
+.meme-controls select,
+.meme-controls button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid var(--neon-green);
+    background-color: var(--deep-purple);
+    color: var(--light-text);
+    font-family: 'Poppins', sans-serif;
+}
+
+.meme-controls input[type="color"] {
+    width: 100%;
+    height: 40px;
+    padding: 0.2rem;
+}
+
+.meme-controls button {
+    background-color: var(--neon-yellow);
+    color: var(--deep-purple);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 0.5rem;
+}
+
+.meme-controls button:hover {
+    background-color: var(--neon-green);
+}
+
+.preset-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.preset-images img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.preset-images img:hover, .preset-images img.selected {
+    border-color: var(--neon-yellow);
+}
+
+/* --- Global Music Toggle --- */
+#music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--deep-purple);
+    border: 2px solid var(--neon-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#music-toggle:hover {
+    border-color: var(--neon-yellow);
+    transform: scale(1.1);
+}
+
+#music-toggle svg {
+    stroke: var(--neon-green);
+    transition: stroke 0.3s ease;
+}
+
+#music-toggle:hover svg {
+    stroke: var(--neon-yellow);
+}
+
+#music-toggle.playing svg {
+    /* This will be handled by JS, but we can have a default state */
+}
